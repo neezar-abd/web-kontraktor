@@ -10,13 +10,13 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-primary text-surface shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link href="/#" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
-            <HardHat className="w-8 h-8 text-cta" />
-            <span className="font-bold text-xl tracking-tight">PT Konstruksi</span>
+        <div className="flex justify-between items-center h-20">
+          <Link href="/#" className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
+            <HardHat className="w-9 h-9 md:w-10 md:h-10 text-cta" />
+            <span className="font-bold text-2xl tracking-tight font-display">PT Konstruksi</span>
           </Link>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 text-lg">
             <Link href="/#about" className="hover:text-cta transition-colors">Tentang Kami</Link>
             <Link href="/#services" className="hover:text-cta transition-colors">Layanan</Link>
             <Link href="/#portfolio" className="hover:text-cta transition-colors">Portofolio</Link>
@@ -25,7 +25,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex">
-            <Link href="/#contact" className="bg-cta hover:bg-cta-hover text-surface px-6 py-2 rounded-sm font-medium transition-colors">
+            <Link href="/#contact" className="bg-cta hover:bg-cta-hover text-surface px-7 py-2.5 rounded-sm font-medium transition-colors text-lg font-display">
               Konsultasi Proyek
             </Link>
           </div>

@@ -1,3 +1,5 @@
+import ScrollReveal from "./ScrollReveal";
+
 export default function TeamSection() {
   const team = [
     {
@@ -29,31 +31,35 @@ export default function TeamSection() {
   return (
     <section id="team" className="py-24 bg-background border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-cta font-bold tracking-wider uppercase text-sm mb-2">Manajemen</h2>
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">Tim Kepemimpinan</h3>
           <p className="text-gray-600">
             Kekuatan utama kami terletak pada pengalaman dan integritas jajaran direksi serta manajemen yang terus membawa standar baru dalam industri.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((person, index) => (
-            <div key={index} className="bg-surface rounded-sm overflow-hidden shadow-sm border border-gray-100 group">
-              <div className="h-64 overflow-hidden">
-                <div 
-                  className="w-full h-full bg-cover bg-top transform group-hover:scale-105 transition-transform duration-500 grayscale group-hover:grayscale-0"
-                  style={{ backgroundImage: `url('${person.image}')` }}
-                ></div>
+            <ScrollReveal key={index} delay={index * 100} className="flex">
+              <div className="bg-surface rounded-sm overflow-hidden border border-gray-200 hover:border-cta/50 hover:bg-primary/[0.01] transition-all duration-300 group flex flex-col w-full">
+                <div className="h-64 overflow-hidden relative">
+                  <div 
+                    className="w-full h-full bg-cover bg-top grayscale group-hover:grayscale-0 transition-all duration-700"
+                    style={{ backgroundImage: `url('${person.image}')` }}
+                  ></div>
+                  <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                </div>
+                <div className="p-6 text-center flex-grow flex flex-col justify-between">
+                  <div>
+                    <h4 className="text-lg font-bold text-primary mb-1">{person.name}</h4>
+                    <p className="text-cta text-sm font-medium mb-3">{person.role}</p>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {person.background}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h4 className="text-lg font-bold text-primary mb-1">{person.name}</h4>
-                <p className="text-cta text-sm font-medium mb-3">{person.role}</p>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {person.background}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

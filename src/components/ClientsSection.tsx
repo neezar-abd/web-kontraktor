@@ -1,6 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
+import ScrollReveal from "./ScrollReveal";
 
 export default function ClientsSection() {
   const clients = ["Waskita Karya", "Adhi Karya", "Pelindo", "Angkasa Pura", "BCA", "Pertamina", "PLN", "Gudang Garam"];
@@ -17,7 +17,7 @@ export default function ClientsSection() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   };
 
   return (
@@ -31,17 +31,14 @@ export default function ClientsSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="inline-block py-1 px-3 rounded-sm bg-primary/5 text-primary text-xs font-bold tracking-widest uppercase border border-primary/10 mb-4">
-            Kemitraan Strategis
-          </span>
-          <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+        <ScrollReveal className="text-center mb-16">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             Dipercaya Oleh Mitra Korporat & BUMN
           </h3>
           <p className="text-gray-500 max-w-2xl mx-auto text-sm md:text-base">
             Komitmen kami terhadap kualitas dan ketepatan waktu telah membuahkan kepercayaan dari berbagai institusi terkemuka di Indonesia.
           </p>
-        </div>
+        </ScrollReveal>
         
         <motion.div 
           variants={containerVariants}

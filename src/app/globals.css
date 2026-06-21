@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #020617;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: #0F172A;
+  --color-primary-hover: #1E293B;
+  --color-secondary: #334155;
+  --color-cta: #0369A1;
+  --color-cta-hover: #075985;
+  --color-surface: #FFFFFF;
+  
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles for focus to maintain accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-cta);
+  outline-offset: 2px;
+}

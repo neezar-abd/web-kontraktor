@@ -16,7 +16,7 @@ export default function Navbar() {
             <span className="font-bold text-2xl tracking-tight font-display">PT Konstruksi</span>
           </Link>
           
-          <div className="hidden md:flex space-x-8 text-lg">
+          <div className="hidden lg:flex space-x-8 text-lg">
             <Link href="/#about" className="hover:text-cta transition-colors">Tentang Kami</Link>
             <Link href="/#services" className="hover:text-cta transition-colors">Layanan</Link>
             <Link href="/#portfolio" className="hover:text-cta transition-colors">Portofolio</Link>
@@ -24,13 +24,13 @@ export default function Navbar() {
             <Link href="/#team" className="hover:text-cta transition-colors">Tim</Link>
           </div>
 
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <Link href="/#contact" className="bg-cta hover:bg-cta-hover text-surface px-7 py-2.5 rounded-sm font-medium transition-colors text-lg font-display">
               Konsultasi Proyek
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button onClick={() => setIsOpen(!isOpen)} className="text-surface cursor-pointer">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -39,7 +39,7 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-primary pb-4 px-4 shadow-lg">
+        <div className="lg:hidden bg-primary pb-4 px-4 shadow-lg">
           <div className="flex flex-col space-y-4 pt-4">
             <Link href="/#about" className="block hover:text-cta" onClick={() => setIsOpen(false)}>Tentang Kami</Link>
             <Link href="/#services" className="block hover:text-cta" onClick={() => setIsOpen(false)}>Layanan</Link>

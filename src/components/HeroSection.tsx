@@ -21,12 +21,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto"
+          className="max-w-4xl mx-auto px-2 sm:px-0"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-surface leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-surface leading-tight mb-6">
             Mitra Terpercaya Pembangunan <span className="text-cta">Infrastruktur Anda</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
             Mewujudkan rancangan masa depan dengan standar kualitas tinggi, keamanan terjamin, dan komitmen waktu yang presisi.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
